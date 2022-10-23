@@ -1,0 +1,963 @@
+*
+{
+            /*ملحوظه هامه*/
+  padding: 0;                              /*الموقع مقسم الى بلوكات  . كل بلوك برقم فى التعليقات  */
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+ 
+ 
+}
+/*----it's important to remove the annoying white space -----*/
+body
+{
+  overflow-x: hidden;
+  font-family: 'Cairo', sans-serif; 
+}
+/*block(1)راس الصفحه (القائمه العلويه)*/
+header
+{
+  background: rgb(13, 13, 13,0.5);
+  height: 60px;
+  width: 100%;
+  position: fixed;
+
+  z-index: 999;
+}
+
+/*"header"تنسيق اللوجو والقائمه فى ال(1)*/
+header .logo img
+{
+  position: absolute;
+  height: 55px;
+  right: 120px;
+  top: 2px;
+  
+}
+header .navigation
+{
+  position: absolute;
+  right: 290px;
+  top: 10px; 
+}
+header .navigation a
+{
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 10px;
+  transition: .3s
+}
+
+header .navigation a:hover
+{
+  color: lightgray
+}
+/*تنسيق تسجيل الدخول (1)*/
+header .log-in
+{
+  position: absolute;
+  left: 200px;
+  top: 10px;
+  width: 120px;
+}
+
+header .log-in a
+{
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+header .log-in a:hover
+{
+  color: lightgray
+}
+header .log-in p
+{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 9px;
+  left: -40px;
+  height:17px ;
+  width: 35px;
+  background: green;
+  color: white;
+  border-radius: 5px;
+  font-size: 12px;
+}
+/*تنسيق وثم تغيير الدولة(1)*/
+header .change-country
+{
+  position: absolute;
+  top: 10px;
+  left: 95px;
+  height: 35px;
+  width: 50px;
+  border-radius: 5px;
+  border: 1px solid  #8a8a5c;
+  transition: .1s
+
+  
+}
+header .change-country:hover
+{
+  border: 1px solid  #5c5c3d
+}
+header .change-country:active
+{
+  outline: 3px solid lightgray ;
+}
+header .change-country img
+{
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+
+/*تنسيق سهم تغيير الدولة (1)*/
+header .change-country .drop-arrow
+{
+  position: absolute;
+  top: 17px;
+  left: 5px;
+  border: 5px;
+  border-style:solid;
+  border-color: white transparent transparent transparent;
+ 
+
+}
+/*(1)تنسيق رابط تغيير الدولة*/
+.toggle
+{
+
+  display: none
+}
+/*header a
+{
+  text-decoration: none;
+  color: black
+}*/
+.country
+{
+  position: relative;
+  background: white;
+  height: 47px;
+  width: 260px;
+  padding-left: 20px;
+  padding-top: 5px;
+  margin-left: 100px;
+  margin-top: 55px;
+  border-radius: 4px;
+  font-size: 17px;
+  
+}
+/*تنسيق العلم الخاص بالدولة(1)*/
+.country img
+{
+  position: absolute;
+  top: 5px;
+  left: 220px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%
+}
+.country p{
+  margin-left: -45px;
+}
+/*تنسيق خلفيه مقدمه الموقع و تعريف  وزر "احجز مكالمه مع احد خبرائنا block(2)"*/
+.container
+{
+  position: relative;
+  height: 100vh
+  
+}
+/*خلفيه مقدمه الصفحه(2)*/
+.container .face-site
+{
+  position: absolute;
+  height: 530px;
+  width: 100%;
+  opacity: 50% black;
+  background: url("elmawkaa-photo.jpg");
+  background-size: cover;
+ /* background-repeat: no-repeat;*/
+  
+}
+
+
+.container .face-site .shdow-ground
+{
+  position: absolute;
+  height: 530px;
+  width: 100%;
+  background-color: black;
+  opacity: 50%;
+  z-index: 1;
+}
+.container .face-site p:nth-child(2)
+{
+  position: absolute;
+  top: 250px;
+  left: 50px;
+  width: 100%;
+  font-size: 55px;
+  color: white;
+  z-index: 5;
+}
+.container .face-site p:nth-child(3)
+{
+  position: absolute;
+  top: 345px;
+  left: 50px;
+  width: 100%;
+  font-size: 18px;
+  color: white;
+  z-index: 5
+}
+.container .face-site a
+{
+  position: absolute;
+  z-index: 5;
+  top: 430px;
+  left: 550px;
+  width: 320px;
+  height: 48px;
+  padding-top: 5px;
+  text-align: center;
+  word-spacing: 5px;
+  background:  #9933ff;
+  border-radius: 5px;
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  transition: .2s
+}
+.container .face-site a:hover
+{
+  background: #6600cc;
+  color: black;
+}
+
+
+/*-(3)تنسيق الكروت الخاصه بالمنتجات والطلب-*/
+.container .products
+{
+  position: absolute;
+  top: 520px;
+  height: 100vh;
+  width: 100%; 
+  left: 100px;
+}
+.container .products h1
+{
+  position: absolute;
+  top: 50px;
+  left: 18%;
+  margin: auto;
+  font-size: 45px;
+}
+.container .products .product-card 
+{
+  position: absolute;
+  top: 150px;
+  display:flex;
+  flex-wrap: wrap;
+  padding-right: 120px;
+  width: 100%;
+  direction: rtl;
+
+ 
+ 
+}
+.container .products .product-card .card
+{
+  position: absolute;
+  margin-right: 20px;
+  right: 100px;
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+ 
+ 
+ 
+}
+.container .products .product-card .card span{
+
+  background: blue;
+  position: absolute;
+  top: 55px;
+  right: 50px;
+  width: 80px;
+  height: 3px;
+}
+.container .products .product-card .card .dalma
+{
+
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  
+}
+.container .products .product-card .card:hover .dalma
+{
+  background: rgba(0, 0, 0, 0.432);
+  color: white;
+}
+
+/*تنسيق كارت خراسانه جاهزه*/
+.container .products .product-card .concrete
+{
+  position: relative;
+  height: 435px;
+  width: 350px;
+  border-radius: 20px;
+  
+  
+}
+
+.container .products .product-card .concrete img
+{
+  position: absolute;
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px
+}
+
+.container .products .product-card .concrete  p:nth-child(1)
+{
+  position: absolute;
+  top: 70px;
+  right: 40px;
+  font-size: 25px;
+
+  
+
+}
+
+
+.container .products .product-card .concrete  p:nth-child(1n+2)
+{
+  position: relative;
+  display: flex;
+  float: right;
+  top: 365px;
+  right: 10px;
+  margin-left: 5px;
+  background:  white;
+  min-width: 60px;
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 12px;
+  color: black 
+}
+/*تنسيق كارت اسمنت معيأ*/
+.container .products .product-card .cement-packed
+{
+  position: relative;
+  height: 435px;
+  width: 350px;
+  border-radius: 20px;
+  
+  
+}
+
+.container .products .product-card .cement-packed  img
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px
+}
+
+.container .products .product-card .cement-packed  p:nth-child(1)
+{
+  position: absolute;
+  top: 70px;
+  right: 40px;
+  font-size: 25px;
+}
+
+
+.container .products .product-card .cement-packed  p:nth-child(1n+2)
+{
+  position: relative;
+  display: flex;
+  float: right;
+  top: 365px;
+  left: -30px;
+  margin-left: 5px;
+  background:  white;
+  min-width: 60px;
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 12px;
+  color: black 
+}
+/*تنسيق كارت اسمنت سايب*/
+
+.container .products .product-card .cement-per-kilo
+{
+  position: relative;
+  height: 435px;
+  width: 350px;
+  border-radius: 20px;
+  
+  
+}
+
+.container .products .product-card .cement-per-kilo  img
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px
+}
+
+.container .products .product-card .cement-per-kilo  p:nth-child(1)
+{
+  position: absolute;
+  top: 70px;
+  right: 40px;
+  font-size: 25px;
+}
+
+
+.container .products .product-card .cement-per-kilo  p:nth-child(1n+2)
+{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  top: 335px;
+  left: -15px;
+  margin-left: 10px;
+  margin-top: 10px;
+  background:  white;
+  min-width: 60px;
+  border-radius: 10px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 12px;
+  float: right;
+  color: black 
+}
+
+/*our-contacts تنسيق الاتصال بنا*/
+.our-contacts
+{
+  position: absolute;
+  bottom: -1550px;
+  height: 450px;
+  width: 100%;
+  background: red;
+  padding-top: 50px
+}
+.our-contacts .email
+{
+  position: absolute;
+  right: 150px;
+  background: white;
+  height: 150px;
+  width: 250px
+}
+.our-contacts .email h5,p
+{
+  text-align: center;
+ 
+}
+.our-contacts i
+{
+  position: absolute;
+  margin-left: 100px
+}
+.our-contacts h5
+{
+  position: absolute;
+  top: 50px;
+  right: 55px;
+  font-size: 25px;
+  font-family: arial
+}
+.our-contacts i
+{
+  position: absolute;
+  top: -5px;
+  font-weight: 100;
+}
+.our-contacts p
+{
+  position: absolute;
+  top: 80px;
+  right: 48px;
+  color: gray
+}
+/*الهاتف*/
+.our-contacts .location
+{
+  position: absolute;
+  right: 850px;
+  background: white;
+  height: 250px;
+  width: 500px
+}
+.our-contacts .location h5,p
+{
+  text-align: center;
+ 
+}
+
+.our-contacts .location h5
+{
+  position: absolute;
+  top: 50px;
+  right: 200px;
+  font-size: 25px;
+  font-family: arial
+}
+.our-contacts .location i
+{
+  position: absolute;
+  left: 155px;
+  top: 10px;
+  font-size: 40px;
+  font-weight: 100;
+}
+.our-contacts .location p
+{
+  position: absolute;
+  top: 80px;
+  right: 48px;
+  color: gray
+}
+/*مكاننا*/
+.our-contacts .phone
+{
+  position: absolute;
+  right: 550px;
+  background: white;
+  height: 150px;
+  width: 250px
+}
+.our-contacts .phone h5,p
+{
+  text-align: center;
+ 
+}
+
+.our-contacts .phone h5
+{
+  position: absolute;
+  top: 50px;
+  right: 100px;
+  font-size: 25px;
+  font-family: arial;
+  color:black
+}
+.our-contacts .phone i
+{
+  position: absolute;
+  top: 50px;
+  font-weight: 100;
+}
+.our-contacts .phone p
+{
+  position: absolute;
+  top: 80px;
+  right: 48px;
+  color: gray
+}
+/*footer*/
+.footer
+{
+  position: absolute;
+  bottom: -1000px;
+  height: 70px;
+  width: 100%;
+  background: #0d0d0d;
+}
+
+.footer p
+{
+  color: white;
+  float: right;
+  margin-top: 20px;
+  margin-right: 120px;
+}
+
+
+.footer p strong
+{
+  color: orange
+}
+.footer i
+{
+  position: relative;
+  right: -770px;
+  top: 6px;
+  color: white;
+  margin-left: 50px;
+  margin-top: 20px;
+  transition: .3s
+  
+  
+}
+.footer i:hover
+{
+  color:  #b30086
+
+}
+.footer #copy-right
+{
+  position: relative;
+  left: -400px;
+  
+}
+
+/*********************************************************ملحوووووووظه هذه النطقه خاصه بصفحه الفورم***************************************************/
+.container2
+{
+  position: relative;
+  height: 1580px;
+  width: 100%;
+  background: url("elmawkaa-photo.jpg");
+  background-size: cover;
+  
+  
+} 
+ .container2 form
+ {
+  position: absolute;
+  height: 1270px;
+  width: 650px;
+  background: white;
+  top: 100px;
+  right: 350px;
+  border-radius: 5px;
+  border: 1px solid lightgray inset
+ }
+/*تنسيق زر "اضغط هنا لتعرف كيف تعمل المنصه"*/
+ .container2 form h2
+ {
+    position: absolute;
+    font-size: 17px;
+    height: 45px;
+    width: 285px;
+    top: 10px;
+    right: 175px;
+    border: 1px solid mediumvioletred;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 5px;
+    transition: 0.3s
+ }
+/*تنسيق رابط الزر العلوى*/
+ .container2 form a
+ {
+  text-decoration: none;
+  color:mediumvioletred
+ }
+
+ .container2 form h2:hover
+ {
+  background: mediumvioletred;
+  color: white
+ }
+/*تنسيق وثم "طلب عرض سعر"*/
+ .container2 form p:nth-child(2)
+ {
+ /* position: absolute;*/
+ 
+  color: gray;
+  font-size: 18px;
+  margin-top: 80px;
+  
+ }
+/*تنسيق وثم"عنوان الفورم"*/
+ .container2 form p:nth-child(3)
+ {
+  margin-bottom: -65px;
+  color: gray;
+  font-size: 35px;
+ }
+/*تنسيق صوره الفورم*/
+ .container2 form img{
+  position: absolute;
+  top: 200px;
+  right: 200px;
+  height: 260px;
+  width: 250px;
+  background: rgb(44, 88, 105)
+ }
+/*تنسيق حاوية "معلومات المنتج / المشروع / تفاصيل اخرى /ازاى نوصلك"*/
+ .container2 form .info-ditals
+ {
+  position: relative;
+  top: 380px;
+  float: right;
+  width: 600px;
+  height: 60px;
+ }
+/*تنسيق وثوم "معلومات المنتج / المشروع /تفاصيل اخرى / ازاى نوصلك"*/
+ .container2 form .info-ditals p
+ {
+  position: relative;
+  top: 20px;
+  margin-right: 20px;
+  font-size: 15px;
+  color: darkgray;
+  display: inline;
+  background: lightgray;
+  height: 80px;
+  min-width: 100px;
+  padding-right: 25px;
+  padding-left: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  transition: 0.3s
+ 
+
+ }
+
+ .container2 form .info-ditals p:nth-child(1)
+ {
+  background: mediumvioletred;
+  color: white
+ }
+ .container2 form .info-ditals p:nth-child(1):hover
+ {
+  border-radius: 0
+ }
+
+ /*تنسيق حاوية تفاصيل طلب المنتجات*/
+ .container2 form .input-order
+ {
+  position: absolute;
+  top: 580px;
+  left: calc(5% /2);
+  height: 49%;
+  width: 95%;
+  background: lightgray;
+  border-radius: 5px;
+ }
+ .container2 form .input-order .cet-pat:nth-child(2)
+ {
+  position: absolute;
+  height: 50px;
+  width: 280px;
+  border-radius: 5px;
+  background: white;
+  outline: none;
+  border: 1px solid gray ;
+  top: 75px;
+  right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  direction: rtl;
+ }
+/*تنسيق وثم اسم المنتج المطلوب*/
+ .container2 form .input-order .proud
+ {
+  position: absolute;
+  top: 25px;
+  left: 480px;
+  font-size: 15px;
+  color: rgb(95, 90, 90);
+ }
+
+ .container2 form .input-order .proud sup
+ {
+  color: red;
+  font-size: 20px
+ }
+ .container2 form .input-order .qun
+ {
+  position: absolute;
+  top: 190px;
+  width: 280px;
+  height: 35px;
+  font-size: 20px;
+  padding: 0 10px 0 10px;
+  decoration: none;
+  border-radius: 5px;
+  right: 20px;
+  direction: rtl;
+  border: 1px solid gray;
+  outline: none
+ }
+/*تنسيق وثم الكميه*/
+ .container2 form .input-order .quantity
+ {
+  position: absolute;
+  top: 140px;
+  left: 550px;
+  font-size: 15px;
+  color: rgb(95, 90, 90);
+ }
+
+ .container2 form .input-order .quantity sup
+ {
+  color: red;
+  font-size: 20px
+ }
+  /*تنسيق وثم اف صوره للمنتج*/
+ .container2 form .input-order .photo
+ {
+  display: none;
+  
+ }
+ .container2 form .input-order .add-photo
+ {
+  position: absolute;
+  top: 320px;
+  right: 20px;
+  height: 45px;
+  width: 150px;
+  background: lightgray;
+  border: 1px solid mediumvioletred;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 17px;
+  box-shadow: 0px -1px 0px 4px rgb(0 0 0 / 20%), 0 0px 3px 3px rgb(0 0 0 / 71%);
+  cursor: pointer;
+
+ }
+ /*تنسيق وثم رتبة الاسمنت*/
+ .container2 form .input-order #position-cement
+ {
+    position: absolute;
+    top:  420px;
+    right: 20px;
+    height: 35px;
+    width: 560px;
+    font-size: 20px;
+    direction: rtl;
+    border-radius: 5px;
+    outline: none;
+ }
+ .container2 form .input-order #position-cement option
+ {
+  position: absolute;
+  height: 45px;
+  background:mediumvioletred;
+ }
+
+ .container2 form .input-order .po-ce
+ {
+  position: absolute;
+  width: 200px;
+  top: 375px;
+  left: 510px;
+  font-size: 15px;
+  color: rgb(95, 90, 90);
+ }
+
+ .container2 form .input-order .po-ce sup
+ {
+  color: red;
+  font-size: 20px
+ }
+ /*تنسيق وثم نوع الاسمنت*/
+ .container2 form .input-order #kind-cement
+ {
+    position: absolute;
+    top:  500px;
+    right: 20px;
+    height: 35px;
+    width: 560px;
+    font-size: 20px;
+    direction: rtl;
+    border-radius: 5px;
+    outline: none;
+ }
+ .container2 form .input-order #kind-cement option
+ {
+  position: absolute;
+  height: 45px;
+  background:mediumvioletred;
+ }
+
+ .container2 form .input-order .ki-ce
+ {
+  position: absolute;
+  width: 200px;
+  top: 455px;
+  left: 510px;
+  font-size: 15px;
+  color: rgb(95, 90, 90);
+ }
+
+ .container2 form .input-order .ki-ce sup
+ {
+  color: red;
+  font-size: 20px
+ }
+
+ /*المصنع*/
+ .container2 form .input-order .fact
+ {
+  position: absolute;
+  top:  575px;
+  right: 20px;
+  padding-right: 10px;
+  height: 35px;
+  width: 560px;
+  font-size: 20px;
+  direction: rtl;
+  border-radius: 5px;
+  border: 1px solid gray;
+  outline: none;
+}
+
+.container2 form .input-order .facto
+ {
+  position: absolute;
+  width: 200px;
+  top: 545px;
+  left: 550px;
+  font-size: 15px;
+  color: rgb(95, 90, 90);
+ }
+ /*تنسيق زر التالى و السابق*/
+
+.container2 form button
+{
+  position: absolute;
+  top: 1220px;
+  height: 38px;
+  width: 85px;
+  border-radius: 10px;
+  border:none;
+  outline: none;
+  font-size: 18px;
+  font-family: 'Cairo', sans-serif; 
+  cursor: pointer
+}
+.container2 form .next
+{
+  background:mediumvioletred;
+  color: white;
+  left: 20px;
+}
+
+.container2 form .prev
+{
+  right: 20px;
+  color: gray
+}

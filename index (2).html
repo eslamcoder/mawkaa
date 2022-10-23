@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+       <!--تنسيق  الخطوط من جول فونتس-->
+   <link href="https://fonts.googleapis.com/css2?family=Alata&family=Alkalami&family=Cairo+Play:wght@700&family=Cairo:wght@500;600&family=Montserrat:wght@300&family=Peralta&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;400&family=Tajawal:wght@800&display=swap" rel="stylesheet">
+   
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   
+   <script src="script.js"></script>
+   
+        <link rel="stylesheet" href="style.css">
+       <title>form</title>
+    </head>
+    <body>
+            <!--header (block 1)قائمه الموقع -->
+    <header>
+        <a href="#" class="logo">
+          <img src="https://bit.ly/3eDVo35">
+        </a>
+          <nav class="navigation">
+            <a href="#">مواد بناء</a>
+            <a href="#">احدث الطلبيات</a>
+            <a href="#">كيف يعمل؟</a>
+            <a href="#">سجل المورد</a>
+            <a href="#">المدونة</a>
+            <a href="#">الباقات</a>
+            <a href="#">اتصل بنا</a>
+          </nav>
+        <div class="log-in">
+          <a href="#"><p>جديد</p>تسجيل دخول</a>
+        </div>
+        <!--تغيير الدولة-->
+        <div onclick="myFunction()" class="change-country">
+          <img src="https://www.crwflags.com/fotw/images/e/eg.gif">
+          <!--السهم فى رز تغيير الدولة-->
+          <div  class="drop-arrow">
+  
+          </div>
+        </div>
+        <!--زر تغيير الدوله-->
+        
+          <div id="count" class="country">
+          <p>المملكة العربية السعودية</p>
+          <img src="https://bit.ly/3F4oK5z">
+        </div>
+          
+        
+      </header>
+        <div class="container2">
+            <form>
+                <a href="#"><h2>اضغط هنا لتعرف كيف تعمل المنصة</h2></a>
+                <p>طلب عرض سعر</p>
+                <p>خرسانة جاهزة</p>
+                <img src="">
+                <div class="info-ditals">
+                    <p>معلومات المنتج </p>
+                    <p>المشروع </p>
+                    <p>تفاصيل اخرى </p>
+                    <p>ازاى نوصلك </p>
+                </div>
+                <div class="input-order">
+                  
+                      
+                      <label class="proud"><sup>*</sup>اسم المنتج مطلوب</label>
+                    
+                        <input class="cet-pat" type="text" value="اسمنت معباء">
+                    <label class="quantity"><sup>*</sup>الكمية</label>
+                    <input class="qun" type="number">
+                    <label  class="add-photo" for="photo">اضف صورة للمنتج</label>
+                    <input class="photo" id="photo" type="file" accept="image" >
+                    <label class="po-ce" for="position-cement"><sup>*</sup>رتبة الاسمنت</label>
+                      <select name="position-cement" id="position-cement">
+                          <option value="42.5">42.5</option>
+                          <option value="52.5">52.5</option>
+                          <option value="32.5">32.5</option>
+                      </select>
+                      <!------>
+                      <label class="ki-ce" for="kind-cement"><sup>*</sup>نوع الاسمنت</label>
+                      <select name="kind-cement" id="kind-cement">
+                          <option value="عادى">عادى</option>
+                          <option value="مقاوم">مقاوم</option>  
+                      </select>
+                      <label class="facto">المصنع</label>
+                      <input class="fact" type="text">
+                </div>
+                <button class="next">التالى</button>
+                <button class="prev">السابق</button>
+            </form>
+        </div>
+        <div class="footer">
+          <p><strong>احجز مكالمه </strong>مع احد خبرائنا</p>
+          <a href="#"><i class='fab fa-facebook-f' style='font-size:17px'></i></a>
+          <a href="#"><i class='fab fa-twitter' style='font-size:17px'></i></a>
+          <a href="#"><i class='fab fa-instagram' style='font-size:17px'></i></a>
+          <a href="#"><i class='fab fa-linkedin-in' style='font-size:17px'></i></a>
+          <p id="copy-right">حقوق النشر 2022 - Elmawkaa, Inc. | جميع الحقوق محفوظة</p>
+        </div>
+    </body>
+</html>
